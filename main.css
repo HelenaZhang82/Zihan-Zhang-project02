@@ -13,24 +13,6 @@ body{
 }
 
 
-.btn01{
-    padding: 0vw 0.5vw;
-    margin-top: 0px;
-    margin-left: 2.5vw;
-    background-image: url(btn01.gif);
-    background-size:90px 80px;
-    background-position: center;
-    border-radius: 50%;
-    height: 4vw;
-    width: 5vw;
-    border: none;
-    letter-spacing: 2.2vw;
-   
-}
-
-.btn01:hover{
-    cursor: pointer;
-}
 
 .gallery-item {
   padding-top: 5vw;
@@ -79,7 +61,7 @@ body{
   opacity: 1;
 }
 
-button{
+button:not(.btn01){
     font-family: landing01;
     font-size: 1.5vw;
     background-color: rgba(145, 25, 21, 0.794);
@@ -150,4 +132,24 @@ p{
 a{
     text-decoration: none;
      color: black;
+}
+
+
+.btn01{
+    padding:1vw 0vw 1vw 0.7vw;
+    margin-top: 0px;
+    margin-left: 2.5vw;
+    background-image: url(btn01.gif);
+    background-size:90px 80px;
+    background-position: center;
+    border-radius: 50%;
+    height: 4vw;
+    width: 4vw;
+    border: none;
+    letter-spacing: 1.5vw;
+   font-family: landing01;
+}
+
+.btn01:hover{
+    cursor: pointer;
 }
