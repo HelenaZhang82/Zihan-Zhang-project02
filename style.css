@@ -1,1 +1,118 @@
 /* STYLE FOR YOUR INDEX.HTML */
+body{
+    margin: 0%;
+    padding:0%;
+    background-image: url(background01.jpg);
+    background-size: contain;
+    background-color: rgb(0, 0, 0);
+    
+}
+
+@font-face {
+    font-family: landing01;
+    src: url(huggable/FontdinerdotcomHuggable.ttf);
+}
+
+.flex-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    font-family: landing01;
+    font-size: 4vw;
+    background-color: rgba(145, 25, 21, 0.794);
+    color: rgb(0, 0, 0);
+    border: 8px outset rgba(0, 0, 0, 0.618);
+    height: 7vw;
+    padding:0vw 2vw;
+    box-shadow: 0 9px rgba(65, 65, 65, 0.721);
+}
+
+.btn01{
+    margin-bottom: 4vw;
+    transition: all 0.3s;
+}
+
+.btn01:hover{
+    color: rgb(48, 56, 137);
+    background-color: rgb(237, 238, 188);
+}
+
+.btn01:active{
+    transform:translateY(6px);
+}
+
+a{
+    text-decoration: none;
+    color:black
+}
+
+.land-title{
+    margin-top: 3vw;
+    font-size: 16vw;
+    text-align: center;
+    font-family: "landing01", sans-serif;
+    color: #0000006e;
+    -webkit-text-stroke: 3px rgba(0, 0, 0, 0.485);
+
+}
+
+.gif01{
+    width: 30px;
+    height: 30px;
+    transition:0.3s ease; /* 平滑过渡 */
+    margin-left: 13vw;
+    margin-bottom: 1vw;
+}
+
+.gif01:hover{
+    transform: scale(4);
+}
+
+.gif02{
+    width: 60px;
+    height: 60px;
+    transition:0.3s ease; /* 平滑过渡 */
+    margin-left: 29vw;  
+    margin-bottom: 8vw;
+}
+
+.gif02:hover{
+    transform: scale(3);
+}
+
+.floating-img{
+  position: fixed;
+  top: 100vh;
+  left: 50vw;
+  width: 150px;
+  height: auto;
+  opacity: 0.8;
+  z-index: 999;
+  animation: floatAcross 12s linear infinite;
+  animation-delay: 0.3s;
+}
+
+.floating-img:active {
+  animation-play-state: paused;
+}
+
+@keyframes floatAcross {
+  0% {
+    left: -100px;
+    top: 30vh;
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(180deg);
+  }
+  100% {
+    left: 120vw;
+    top: 25vh;
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}

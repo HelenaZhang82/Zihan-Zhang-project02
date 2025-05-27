@@ -1,1 +1,129 @@
 /* STYLE FOR YOU MAIN.HTML */
+body{
+    background-image: url(background02.jpg);
+    background-size: cover;
+    background-color: black;
+}
+
+
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+
+.gallery-item {
+  padding-top: 5vw;
+  flex: 0 0 30vw;
+  scroll-snap-align: center;
+  position: relative;
+  text-align: center;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);
+  
+}
+
+.gallery-item img {
+  filter: blur(3px);
+  transition: filter 0.4s ease;
+  border-radius: 5px;
+  height:250px;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* 默认文字隐藏 */
+.gallery-item .desc {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: white;
+}
+
+.gallery-container{
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    gap: 1vw;
+    padding: 2vw;
+     scroll-behavior: smooth;
+}
+
+.gallery-item:focus-within img,
+.gallery-item:hover img {
+  filter: blur(0px);
+}
+
+.gallery-item:focus-within .desc,
+.gallery-item:hover .desc {
+  opacity: 1;
+}
+
+button{
+    font-family: landing01;
+    font-size: 1.5vw;
+    background-color: rgba(145, 25, 21, 0.794);
+    color: rgb(0, 0, 0);
+    border: 4px outset rgba(0, 0, 0, 0.618);
+    height: 2vw;
+    padding:0vw 2vw;
+    box-shadow: 0 9px rgba(0, 0, 0, 0.519);
+}
+
+
+.btn{
+    margin-bottom: 4vw;
+    transition: all 0.3s;
+}
+
+.btn:hover{
+    color: rgb(48, 56, 137);
+    background-color: rgb(237, 238, 188);
+}
+
+.btn:active{
+    transform:translateY(6px);
+}
+
+
+
+@font-face {
+    font-family: landing01;
+    src: url(huggable/FontdinerdotcomHuggable.ttf);
+}
+
+@font-face {
+    font-family: des;
+    src: url(righteous/Righteous-Regular.ttf);
+}
+
+
+p{
+    font-family: landing01;
+    color: rgb(242, 255, 197);
+    font-size: 40px;
+    -webkit-text-stroke: 3px rgba(0, 0, 0, 0.485);
+}
+
+.description-container{
+    display:flex ;
+}
+
+.studioimg{
+    height: 10vw;
+    margin-left: 20px;
+}
+
+.description{
+    font-family:des;
+    align-items: center;
+    color: rgb(255, 253, 226);
+    word-spacing: 0.4vw;
+    letter-spacing: 2.5px;
+    padding: 10px 0px 25px 20px;
+    background-color: rgba(172, 0, 0, 0.681);
+    font-size: 20px;
+    margin-top: 38px;
+}
+
